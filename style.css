@@ -4,73 +4,66 @@
     box-sizing: border-box;
 }
 body{
-    /* position: absolute;
-    left: 50%;
+    font-family: sans-serif;
+    position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%); */
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-image: url(./img/bg.jpg);
     background-repeat: no-repeat;
-    /* background-position: center; */
     background-size: cover;
-    font-family: sans-serif;
 }
-.product-card{
-    width: 799px;
-    height: 444px;
+.container-info{
+    height: 377px;
+    width: 666px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 5rem;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(211, 211, 211, 0.6);
-    backdrop-filter: blur(20px);
+    background-color: rgb(245, 245, 245, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 37px whitesmoke;
     border: 2px solid whitesmoke;
-    border-radius: 20px;
-    box-shadow: 0 0 50px whitesmoke;
+    border-radius: 1rem;
 }
-.product-img{
-    width: 299px;
+.img-product{
+    width: 311px;
 }
-.product-img img{
+.img-product img{
     width: 100%;
+    animation: rotate 2s ease-in infinite alternate;
 }
-.product-heading {
-    text-align: center;
+.heading{
+    font-size: 2rem;
+    color: rgb(67, 67, 67);
 }
-  
-.heading {
-    font-size: 3.5rem;
+.price{
+    font-size: 1.5rem;
+    color: rgb(67, 67, 67);
 }
-.price {
-    font-size: 1.7rem;
-    color: black;
-    margin-top: 3rem;
-}
-.product-info{
+.detail{
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 .btn{
-    margin-top: 3rem;
+    font-size: 1.2rem;
     outline: none;
-    font-size: 1.6rem;
-    background-color: gray;
-    border-radius: 2rem;
-    padding: 7px 19px;
     border: none;
-    color: white;
+    border-radius: 1.2rem;
+    padding: 0.6rem 1.5rem;
+    color: gray;
     animation: btn-scale 1s ease-in infinite alternate;
 }
 .btn:hover{
-    color: gray;
     background-color: transparent;
-    outline: 2px solid gray;
+    animation-play-state: paused;
+    color: whitesmoke;
+    outline: 2px solid whitesmoke;
+    cursor: pointer;
+}
+.img-product img:hover{
     animation-play-state: paused;
     cursor: pointer;
 }
@@ -78,6 +71,20 @@ body{
     from{
         transform: scale(1);
     }to{
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
+@keyframes rotate {
+    from{
+        transform: rotate(0);
+    }to{
+        transform: rotate(90deg) scale(1.1);
+    }
+}
+/* @keyframes rotate {
+    from{
+        transform: translateX(0);
+    }to{
+        transform: translateX(20px);
+    }
+} */
