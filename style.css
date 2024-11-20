@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(./img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-info{
+    height: 377px;
+    width: 666px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(245, 245, 245, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 37px whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 1rem;
+}
+.img-product{
+    width: 311px;
+}
+.img-product img{
+    width: 100%;
+    animation: rotate 2s ease-in infinite alternate;
+}
+.heading{
+    font-size: 2rem;
+    color: rgb(67, 67, 67);
+}
+.price{
+    font-size: 1.5rem;
+    color: rgb(67, 67, 67);
+}
+.detail{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn{
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    border-radius: 1.2rem;
+    padding: 0.6rem 1.5rem;
+    color: gray;
+    animation: btn-scale 1s ease-in infinite alternate;
+}
+.btn:hover{
+    background-color: transparent;
+    animation-play-state: paused;
+    color: whitesmoke;
+    outline: 2px solid whitesmoke;
+    cursor: pointer;
+}
+.img-product img:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+@keyframes btn-scale {
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(1.1);
+    }
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0);
+    }to{
+        transform: rotate(90deg) scale(1.1);
+    }
+}
+/* @keyframes rotate {
+    from{
+        transform: translateX(0);
+    }to{
+        transform: translateX(20px);
+    }
+} */
